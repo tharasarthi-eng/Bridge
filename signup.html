@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css"> <!-- Reusing your existing CSS -->
+</head>
+<body>
+    <div class="login-container">
+        <form id="signup-form">
+            <h2>Create Account</h2>
+            <div class="input-group">
+                <input type="text" id="new-username" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="new-password" placeholder="Create Password" required>
+            </div>
+            <button type="submit">Register</button>
+            <p class="message">Already have an account? <a href="index.html">Login</a></p>
+        </form>
+    </div>
+    <script>
+        // Simple logic for the signup page
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('new-username').value;
+            alert("Account created for " + name + "! (Note: This is a demo; data is not saved to a database).");
+            window.location.href = "index.html"; // Redirects back to login
+        });
+    </script>
+</body>
+</html>
